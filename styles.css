@@ -433,3 +433,78 @@ h1, h2, h3 {
     letter-spacing: -0.02em;
     font-weight: 700;
 }
+
+.extra-info {
+    font-size: x-large;
+    color: #228B22;
+}
+
+.extra-info strong {
+    color: var(--earth-brown);
+    font-weight: 800;
+    
+}
+
+.social-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 10px;
+}
+
+.social-icon {
+    font-size: 30px;
+    color: #555555;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.facebook:hover {
+    color: #1877f2;
+    transform: scale(1.1);
+}
+
+.instagram:hover {
+    color: #E1306C;
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 768px) {
+    header, my-site-header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        padding: 20px 2%;
+    }
+    header ul {
+        flex-direction: column;
+        gap: 10px;
+        padding: 0;
+    }
+    header li {
+        margin-left: 0;
+    }
+    .hero h1 {
+        font-size: 1.8rem !important;
+    }
+    .main-title, .main-title-white, .concept-title {
+        font-size: 1.8rem;
+        padding: 30px 10px;
+        margin-bottom: 20px;
+    }
+    .section-title {
+        font-size: 1.6rem;
+        margin: 25px 10px;
+    }
+    .container {
+        padding: 0 15px;
+    }
+    .mission, .concept, .blog-preview, .blog-preview-green {
+        padding: 40px 15px;
+    }
+    .vision {
+        font-size: 1.1rem;
+        padding: 20px 10px;
+    }
+    
+}
