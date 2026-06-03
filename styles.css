@@ -470,11 +470,14 @@ h1, h2, h3 {
 }
 
 @media screen and (max-width: 768px) {
-    header, my-site-header {
+    header, my-site-header .hero {
         flex-direction: column;
         gap: 15px;
         text-align: center;
         padding: 20px 2%;
+        background-attachment: scroll !important;
+        height: 50vh;
+
     }
     header ul {
         flex-direction: column;
