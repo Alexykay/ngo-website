@@ -9,23 +9,25 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-   <header>
+   <header class="my-site-header">
    <div class="logo"><a href="index.html"><img src="images/g2.png" alt="Sankofa Earth Foundation"></a></div> 
 
-   <section class="my-site-header">
-   <div class="text-design">
-   <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
+   <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+   <label for="menu-toggle" class="hamburger-label">
+    <span></span>
+    <span></span>
+    <span></span>
+   </label>
 
-        </ul>
-    </nav>
-    </div>
+   <nav class="nav-menu">
+    <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+   </nav>
 </header>
-</section>
 
 <section class="hero">
     <div class="container">
@@ -66,15 +68,46 @@
 
 
 <footer>
-     <p>&copy; 2026 Sankofa Earth Foundation. All rights reserved</p><br>
+  <div class="container footer-grid">
+    
+    <div class="footer-col brand-col">
+      <div class="logo">
+        <img src="./images/g2.png" alt="Sankofa Earth Foundation" style="height: 50px;">
+      </div>
+      <p class="footer-desc">
+        We work with communities, especially women and children, to promote environmental sustainability, climate action, and a just energy transition.
+      </p>
+      <div class="footer-socials">
+        <a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+    </div>
 
-<div class="social-container">
-    <a href="https://www.facebook.com/profile.php?id=61586742355646&name=xhp_nt_fb_action_open_user" target="_blank" class="social-icon facebook">
-    <i class="fa-brands fa-facebook-f"></i></a>
+    <div class="footer-col">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
 
-    <a href="https://www.instagram.com/SankofaEarthFoundation" target="_blank" class="social-icon instagram">
-    <i class="fa-brands fa-instagram"></i></a>
-</div>  
+    <div class="footer-col contact-col">
+      <h3>Contact Us</h3>
+      <p><i class="fa-solid fa-location-dot"></i> GOWA CLOSE NO.4 ROMAN RIDGE</p>
+      <p><i class="fa-solid fa-phone"></i> +233 24 468 3707</p>
+      <p><i class="fa-solid fa-phone"></i> +233 20 749 0881</p>
+      <p><i class="fa-solid fa-envelope"></i> Sankofaearthfoundation@gmail.com</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container">
+      <p>&copy; 2026 Sankofa Earth Foundation. All rights reserved.</p>
+    </div>
+  </div>
 </footer>
 
 </body>
