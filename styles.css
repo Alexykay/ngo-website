@@ -57,12 +57,15 @@ header a:hover {
 }
 
 .logo img {
-    height: 65px;
-    width: auto;
+    height: 85px !important;
+    width: auto !important;
     max-width: 100%;
     display: block;
 }
 
+.logo a {
+    display: inline-block;
+}
 .menu-checkbox {
     display: none;
 }
