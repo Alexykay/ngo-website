@@ -30,7 +30,53 @@
    </nav>
 </header>
 
-<section class="contact-section">
+<!-- NEW CONTACT SECTION WITH DONATE SECTION -->
+ <section class="contact-section">
+  <div class="container">
+    <div class="split-view">
+
+      <!-- Form 1: Contact Form (Fixed double <form> tag issue) -->
+      <div class="contact-form">
+        <h2>Send Us A Message</h2>
+        <form action="https://formspree.io/f/xbdvlglj" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="message" placeholder="How can we help?" required rows="5"></textarea>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+
+      <!-- Column 2: Contact Info -->
+      <div class="contact-info">
+        <h2>Contact Info</h2>
+        <p><strong>Address</strong> GOWA CLOSE NO.4 ROMAN RIDGE</p>
+        <p><strong>Phone</strong> +233 24 468 3707, +233 20 749 0881</p>
+        <p><strong>Email</strong> Sankofaearthfoundation@gmail.com</p>
+      </div>
+
+      <!-- Column 3: Donate / Payment Details (NEW) -->
+      <div class="donate-info">
+        <h2>Support Our Cause</h2>
+        <p>Your contributions help us empower local communities and lead environmental change.</p>
+        
+        <div class="payment-box">
+          <p><strong><i class="fa-solid fa-mobile-screen"></i> Mobile Money (MoMo)</strong></p>
+          <p>MTN / Telecel: +233 24 468 3707</p>
+          <p><small>Name: Sankofa Earth Foundation</small></p>
+        </div>
+
+        <div class="payment-box">
+          <p><strong><i class="fa-solid fa-building-columns"></i> Bank Transfer</strong></p>
+          <p>Bank: [Your Bank Name]</p>
+          <p>Account: [Your Account Number]</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- <section class="contact-section">
     <div class="container">
     <div class="split-view">
 
@@ -57,7 +103,7 @@
     </div>
     </div>
     </div>
-</section>
+</section> -->
 
 <section class="contact-map-section">
     <iframe 
@@ -84,6 +130,7 @@
       <div class="footer-socials">
         <a href="https://www.facebook.com/share/17nPXtnWMn/" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
         <a href="https://www.instagram.com/p/DZ0XT1hjO1_/?img_index=4&igsh=MW5reG1qZGVjbDJneQ==" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/sankofa-earth-foundation/" class="social-icon"><i class="fa-brands fa-linkedin"></i></a>
       </div>
     </div>
 
