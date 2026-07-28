@@ -128,12 +128,16 @@ h1, h2, h3, h4, h5, h6 {
    ========================================================================== */
 header, 
 .my-site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 5%;
     background-color: var(--forest-green);
     color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .my-site-header .logo img {
@@ -244,16 +248,18 @@ header a:hover {
 }
 
 .circle-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 35px;
-    height: 35px;
-    background-color: var(--earth-brown);
-    color: white;
-    border-radius: 50%;
-    text-decoration: none;
-    font-weight: bold;
+   display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: var(--forest-green);
+  color: var(--off-white);
+  text-decoration: none;
+  font-size: 1.2rem;
+  align-self: flex-start;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 
@@ -293,10 +299,15 @@ header a:hover {
 }
 
 .blog-preview-green {
-    background-color: var(--off-white);
+
+    background-image: linear-gradient(rgba(255, 253, 208, 0.88), rgba(253, 253, 208, 0.94)), url('./images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
     padding: 80px 0;
     text-align: center;
-    margin-bottom: 0 !important;
+    color: white;
+    width: 100%;
+
 }
 
 
@@ -332,38 +343,61 @@ header a:hover {
     color: var(--forest-green);
 }
 
-.vision-container {
-    display: flex;
-    gap: 2.5rem;
-    padding: 0 4rem;
-    align-items: flex-start;
-    background-color: var(--off-white);
-    border-radius: 12px;
-}
+.vision-container { 
+  background-color: #fffff0;
+  padding: 80px 20px;
 
-.vision-container div {
-    flex: 1;
 }
 
 .vision {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 0 4rem;
+    border-radius: 12px;
     font-size: 1.4rem;
-    justify-content: center;
+    align-items: flex-start;
     text-align: center;
     padding: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
-.vision p, .mission p {
-    margin-bottom: 1.25rem;
+.vision h2, .mission h2 {
+color: var(--earth-brown);
+  font-size: 2rem;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+  border-bottom: 2px solid var(--forest-green);
+  display: inline-block;
+  padding-bottom: 4px;
+}
+
+.vision-box p, .mission-box p {
+    font-size: 1.8rem;
     line-height: 1.6;
-    font-size: 1.4rem;
+    opacity: 0.95;
+    margin-bottom: 12px;
 }
 
-.vision h3, .mission h3 {
-    color: var(--forest-green);
-    font-weight: bolder;
+.vision-box, .mission-box {
+    flex: 1 1 300px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
 }
 
 /* Concept Grid */
+
+.concepts {
+    background-color: #ffffff;
+    color: var(--off-white);
+    padding: 100px 20px 60px 20px;
+    padding: 80px 20px;
+}
+
 .concept {
     padding: 80px 0;
     background: linear-gradient(to bottom, #f9fbf9, #ffffff);
@@ -371,49 +405,52 @@ header a:hover {
 }
 
 .concept-title {
-    font-size: 2.5rem;
-    justify-content: center;
+    font-size: 2.2rem;
     text-align: center;
-    color: var(--earth-brown);
-    padding: 80px 0;
-    margin-bottom: 40px;
+    color: var(--dark-text);
+    max-width: 700px;
+    margin: 0 auto 50px auto;
 }
 
 .concept-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
-    padding: 40px 0;
+    gap: 30px;
 }
 
 .concept-card {
     background: #ffffff;
-    width: 260px;
-    padding: 40px 20px;
     border-radius: 12px;
-    text-align: center;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.8);
-    border: 1px solid #f0f0f0;
-    transition: transform 0.3s ease;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 250px;
+    max-width: 320px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .concept-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-6px);
     border-color: transparent;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
 }
 
 .concept-card h3 {
-    color: var(--forest-green);
+    color: var(--dark-text);
     font-size: 1.2rem;
     margin-bottom: 20px;
 }
 
 .concept-icon img {
-    width: 200px;
-    height: auto;
-    margin-bottom: 40px;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
 }
 
 
@@ -733,7 +770,8 @@ header a:hover {
 }
 
 .contact {
-    margin-top: 25px;
+    padding-top: 60px;
+    background-color: #fffff0;
 }
 
 
@@ -1090,9 +1128,15 @@ footer {
         left: 0;
         width: 100%;
         background-color: var(--forest-green);
+        color: var(--off-white);
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 1.05rem;
+        letter-spacing: 0.5px;
+        padding: 8px 16px;
         max-height: 0;
         overflow: hidden;
-        transition: max-height 0.3s ease-in-out;
+        transition: all 0.3s ease;
         z-index: 100;
     }
 
@@ -1142,8 +1186,7 @@ footer {
     .container {
         padding: 0 15px;
     }
-
-    .mission, 
+ 
     .concept, 
     .blog-preview, 
     .blog-preview-green {
@@ -1187,11 +1230,6 @@ footer {
         gap: 40px;
     }
 
-    .vision {
-        font-size: 1.1rem;
-        padding: 20px 10px;
-    }
-
     .team-grid {
         flex-direction: column;
         align-items: center;
@@ -1218,6 +1256,17 @@ footer {
     .contact-map-section {
         height: 320px !important; 
         margin-top: 40px;
+    }
+
+    .vision {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 10px;
+    }
+
+    .vision-box, .mission-box {
+        width: 100%;
+        padding: 20px;
     }
 }
 
