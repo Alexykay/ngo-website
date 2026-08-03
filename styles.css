@@ -588,6 +588,116 @@ color: var(--earth-brown);
     transform: translateX(-50%) translateY(0); 
 }
 
+/* Board & Volunteers */
+.slider {
+    max-width: 850px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.slider input[type="radio"] {
+    display: none;
+}
+
+.board-slider {
+    display: grid;
+}
+
+.board-card-1, .board-card-2, .board-card-3 {
+    grid-area: 1/1;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 2.5rem;
+    background: #f7f4f0;
+    border-radius: 20px;
+    padding: 6rem 5rem;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    text-align: left;
+    pointer-events: none;
+    min-height: 380px;
+    position: relative;
+}
+
+.badge {
+    font-weight: 900;
+    color: #d97706;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.board-bio {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+}
+
+.board-card-1 h3, .board-card-2 h3, .board-card-3 h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: var(--dark-text);
+}
+
+.board-role {
+    margin: 0;
+    color: #666;
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+.profile-img {
+    width: 240px;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #fff;
+}
+
+/* Radio toggle logic for the 3 cards */
+#card1:checked ~ .board-slider .board-card-1,
+#card2:checked ~ .board-slider .board-card-2,
+#card3:checked ~ .board-slider .board-card-3
+{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Side Arrow Buttons */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    background: #ffffff;
+    color: #333333;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    user-select: none;
+    z-index: 10;
+}
+
+.arrow:hover {
+    background-color: #d97706;
+    color: #ffffff;
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* Position Left & Right Buttons over card edges */
+.arrow-prev {
+    left: -22px; 
+}
+
+.arrow-next {
+    right: -22px;
+}
+
 
 /* ==========================================================================
    #10. GALLERY & MEDIA SECTIONS
@@ -1271,6 +1381,41 @@ footer {
     .vision-box, .mission-box {
         width: 100%;
         padding: 20px;
+    }
+
+    .slider {
+        width: 100%;
+        margin: 10px auto;
+    }
+
+    .board-card-1,
+    .board-card-2,
+    .board-card-3 {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 3.5rem 1.5rem 2.5rem 1.5rem;
+        min-height: auto;
+        text-align: center;
+    }
+
+    .profile-img {
+        width: 150px;
+        margin: 0 auto;
+        grid-row: 1;
+    }
+
+    .arrow {
+        width: 36px;
+        height: 36px;
+        font-size: 0.9rem;
+    }
+
+    .arrow-prev {
+        left: 5px;
+    }
+
+    .arrow-next {
+        right: 5px;
     }
 }
 
